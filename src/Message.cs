@@ -243,7 +243,7 @@ namespace HL7.Dotnetcore
                         try
                         {
                             var field = this.getField(segment, allComponents[1]);
-                            strValue = field.ComponentList[componentIndex - 1].SubComponentList[subComponentIndex - 1].Value;
+                            strValue = field?.ComponentList[componentIndex - 1]?.SubComponentList[subComponentIndex - 1]?.Value;
                         }
                         catch (Exception ex)
                         {
@@ -257,7 +257,7 @@ namespace HL7.Dotnetcore
                         try
                         {
                             var field = this.getField(segment, allComponents[1]);
-                            strValue = field.ComponentList[componentIndex - 1].Value;
+                            strValue = field?.ComponentList[componentIndex - 1]?.Value;
                         }
                         catch (Exception ex)
                         {
@@ -269,7 +269,7 @@ namespace HL7.Dotnetcore
                         try
                         {
                             var field = this.getField(segment, allComponents[1]);
-                            strValue = field.Value;
+                            strValue = field?.Value;
                         }
                         catch (Exception ex)
                         {
@@ -280,7 +280,7 @@ namespace HL7.Dotnetcore
                     {
                         try
                         {
-                            strValue = segment.Value;
+                            strValue = segment?.Value;
                         }
                         catch (Exception ex)
                         {
